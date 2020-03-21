@@ -3,23 +3,70 @@
 <head>
 
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Hind+Siliguri&display=swap" rel="stylesheet"> 
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@700&display=swap" rel="stylesheet"> 
+
     <style>
+        #nome{
+            background-color:aqua;
+            text-align: center;
+            font-family: 'Saira', sans-serif;
+            margin-top: 20px;
+            color:indigo;
+        }
+
+        .lista{
+            margin: 0 0 20px 0;
+            padding: 0px;
+    
+        }
+
+        .lista li{
+            display: inline;
+            margin-right: 5px;
+        }
+
+        .lista a{
+            background:rgb(1, 75, 75);
+            border:1px solid #554f4c;
+            color: cornflowerblue;
+            padding: 5px;
+            text-decoration: none;
+
+        }
+        
         #apresentacao{
             text-align: center;
             font-size: 35px;
+            color:indigo;
+        }   
+        
+        #sobre{
+            background-color:aqua;
+            text-align:center;
+            font-size: 25px;
+            font-weight:bolder;
+            color:black;
         }
 
         #Julio {
-            
-            border-radius:50%;
-            border-style:inset;
+            position: relative;
+            border-radius: 50%;
+            border-style:groove;
             border-width: 5px;
+            margin-left: 490px;
+            border-color:blueviolet;
         }
     
         body {
         font-family: 'Hind Siliguri', sans-serif;
         font-family: 'Baloo Chettan 2', cursive;
+        background-image: url(3325193.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: #554f4c;
+        margin: 0;
+                
     }    
 
     p{
@@ -34,14 +81,21 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="nome">Júlio César Tinin | Portifólio</title>
+    <title>Júlio César Tinin | Portifólio</title>
 </head>
-<body bgcolor="ccccff">
-    <h1 id="sobre">Júlio César Tinin</h1>
-    <img src="Julio_trybe.jpeg" id="Julio" alt="Julio com a camisa da Trybe" width="350">
-    <p id="apresentacao"><em>Mergulhando no mundo do Desenvolvimento Full-Stack na <strong>Trybe</strong></em></p>
+<body>
+    <h1 id="nome">Júlio César Tinin</h1>
+    <img src="genius_julio.jpg" id="Julio" alt="Julio com a camisa da Trybe" width="350">
+    <p id="apresentacao"><em><strong></strong>Mergulhando no mundo do Desenvolvimento Full-Stack na Trybe</strong></em></p>
     
-    <p>Entusiasta da tecnologia<br>
+<nav>
+    <ul class="lista">
+    <li><a href="#Julio" class="botao01">Minha foto</a></li>
+    <li><a href="#sobre">Sobre Julio</a></li>
+    <li><a href="#passatempos">Passatempos</a></li>
+    </ul>
+    </nav>
+    <p id="sobre"><strong>Entusiasta da tecnologia</strong><br>
        Brasil / São Paulo<br>
     </p><br><br>
     <p>Já fui aluno do curso de Ciência da Computação e agora curso Engenharia de Software
@@ -67,12 +121,13 @@
     <li>Games</li>
     </ul>
 
-    <li><a href="#Julio">Minha foto</a></li>
-    <li><a href="#sobre">Sobre Julio</a></li>
-    <li><a href="#passatempos">Passatempos</a></li>
-    </p>
     Faz muito tempo que não entro em blog nenhum, mas costumava entrar nesse: 
     <a href="http://www.ligadeboxe.com.br/v2/">Liga de Boxe</a>
+
+    <br>
+    <br>
+    <br>
+    <br>
 
 </body>
 </html>
