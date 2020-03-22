@@ -7,18 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira:wght@700&display=swap" rel="stylesheet"> 
 
     <style>
+        #efeito-fundo {
+            background: rgba(179, 236, 179, 0.63);
+        }
+
         #nome{
-            background-color:aqua;
+            background-color:rgb(3, 5, 90);
+            background-attachment:local;
+            text-align: justify;
             text-align: center;
             font-family: 'Saira', sans-serif;
             margin-top: 20px;
-            color:indigo;
+            color:whitesmoke;
         }
 
         .lista{
             margin: 0 0 20px 0;
             padding: 0px;
-    
         }
 
         .lista li{
@@ -46,23 +51,28 @@
             text-align:center;
             font-size: 25px;
             font-weight:bolder;
-            color:black;
+            color: navy;
+         
+        }
+        #trybe{
+            color: green;
         }
 
         #Julio {
             position: relative;
             border-radius: 50%;
-            border-style:groove;
+            border-style:hidden;
             border-width: 5px;
             margin-left: 490px;
             border-color:blueviolet;
+            shape-margin: 5px;
         }
     
         body {
         font-family: 'Hind Siliguri', sans-serif;
         font-family: 'Baloo Chettan 2', cursive;
         background-image: url(3325193.jpg);
-        background-repeat: no-repeat;
+        background-repeat:repeat-y;
         background-size: contain;
         color: #554f4c;
         margin: 0;
@@ -86,7 +96,7 @@
 <body>
     <h1 id="nome">Júlio César Tinin</h1>
     <img src="genius_julio.jpg" id="Julio" alt="Julio com a camisa da Trybe" width="350">
-    <p id="apresentacao"><em><strong></strong>Mergulhando no mundo do Desenvolvimento Full-Stack na Trybe</strong></em></p>
+    <p id="apresentacao"><em><strong>Mergulhando no mundo do Desenvolvimento Full-Stack na <span id="trybe">Trybe</span></strong></em></p>
     
 <nav>
     <ul class="lista">
@@ -95,30 +105,31 @@
     <li><a href="#passatempos">Passatempos</a></li>
     </ul>
     </nav>
-    <p id="sobre"><strong>Entusiasta da tecnologia</strong><br>
+    <p id="sobre"><strong>Entusiasta da Tecnologia</strong><br>
        Brasil / São Paulo<br>
     </p><br><br>
     <p>Já fui aluno do curso de Ciência da Computação e agora curso Engenharia de Software
     <p>Trabalhei na área de T.I. durante um tempo, porém com foco em tecnologias de redes e telecomunicações</p>
     <br>
     <br>
-    <h3><font color="green">No meu trabalho anterior, desenvolvia diversas atividades importantes, 
+    <h3><font color="navy">No meu trabalho anterior, desenvolvia diversas atividades importantes, 
         dentre as principais, estavam:</font>
     </h3>
-    <ol>
+    <ol><div id="efeito-fundo">
         <li>Desenvolvimento de propóstas técnicas</li>
         <li>Contato com cliente</li>
         <li>Escopo de projetos de redes</li>
         <li>Análise de licitações</li>
+        </div>
     </ol>
-    <h3 id="passatempos"><font color="green">Também gosto de fazer outras coisas nas horas vagas:</font>
+    <h3 id="passatempos"><font color="navy">Também gosto de fazer outras coisas nas horas vagas:</font>
     </h3>
-    <ul>
+    <ul><div id="efeito-fundo">
     <li>Boxe</li>
     <li>Corrida de rua</li>
     <li>Livros</li>
     <li>Séries</li>
-    <li>Games</li>
+    <li>Games</li></div>
     </ul>
 
     Faz muito tempo que não entro em blog nenhum, mas costumava entrar nesse: 
