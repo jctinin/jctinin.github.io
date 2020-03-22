@@ -14,21 +14,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira:wght@700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet"> 
     <style>
+
+        #fundo{
+            background-color: rgba(7, 7, 109, 0.699);
+            border-radius: 10px; 
+            padding-left: 10px;
+            padding-right: 10px;  
+
+        }
+
         #efeito-fundo {
             background: rgba(179, 236, 179, 0.767);
         }
 
         #nome{
-            background-color:rgb(3, 5, 90);
-            text-align: center;
+          
+            text-align:center;
             font-family: 'Monoton', cursive;
             margin-top: 20px;
+
             color:rgba(81, 255, 0, 0.781);
         }
 
         .lista{
             margin: 0 0 20px 0;
             padding: 0px;
+            margin-left: 15px;
         }
 
         .lista li{
@@ -37,9 +48,11 @@
         }
 
         .lista a{
+            padding-left: 15px;
             background:rgb(1, 75, 75);
-            border:1px solid #554f4c;
-            color: cornflowerblue;
+            border:2px solid #00c9fc;
+            color: rgba(20, 235, 0, 0.932);
+            border-radius: 5px;
             padding: 5px;
             text-decoration: none;
 
@@ -49,18 +62,22 @@
             text-align: center;
             font-size: 35px;
             color:indigo;
+            text-decoration: none;
         }   
         
         #sobre{
             background-color:aqua;
             text-align:center;
-            font-size: 25px;
+            font-size: 35px;
             font-weight:bolder;
             color: navy;
          
         }
         #trybe{
             color: green;
+            text-decoration:wavy;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
         }
 
         #Julio {
@@ -68,7 +85,7 @@
             border-radius: 50%;
             border-style:hidden;
             border-width: 5px;
-            margin-left: 38%;
+            margin-left: 37%;
             border-color:blueviolet;
             shape-margin: 5px;
         }
@@ -97,9 +114,9 @@
 
 </head>
 <body>
-    <h1 id="nome">Júlio César Tinin</h1>
+    <h1 id="nome"><span id="fundo">Júlio César Tinin</span></h1>
     <img src="genius_julio.jpg" id="Julio" alt="Julio com a camisa da Trybe" width="350">
-    <p id="apresentacao"><em><strong>Mergulhando no mundo do Desenvolvimento Full-Stack na <span id="trybe">Trybe</span></strong></em></p>
+    <p id="apresentacao"><em><strong>Mergulhando no mundo do Desenvolvimento Full-Stack na <a href="https://www.betrybe.com"><span id="trybe">Trybe</span></a></strong></em></p>
     
 <nav>
     <ul class="lista">
@@ -110,9 +127,9 @@
     </nav>
     <p id="sobre"><strong>Entusiasta da Tecnologia</strong><br>
        Brasil / São Paulo<br>
-    </p><br><br>
-    <p>Já fui aluno do curso de Ciência da Computação e agora curso Engenharia de Software
-    <p>Trabalhei na área de T.I. durante um tempo, porém com foco em tecnologias de redes e telecomunicações</p>
+    </p><br>
+    <p class="historico">Já fui aluno do curso de Ciência da Computação e agora curso Engenharia de Software
+    <p class="historico">Trabalhei na área de T.I. durante um tempo, porém com foco em tecnologias de redes e telecomunicações</p>
     <br>
     <br>
     <h3><font color="navy">No meu trabalho anterior, desenvolvia diversas atividades importantes, 
