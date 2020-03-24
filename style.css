@@ -1,0 +1,144 @@
+
+#fundo{
+    background-color: rgba(7, 7, 109, 0.699);
+    border-radius: 10px; 
+    padding-left: 10px;
+    padding-right: 10px;  
+}
+
+#nome{
+  
+    text-align:center;
+    font-family: 'Audiowide', cursive;
+    margin-top: 20px;
+    color:rgba(81, 255, 0, 0.781);
+    font-size: 45px;
+}
+
+#Julio {
+    position: relative;
+    border-radius: 50%;
+    border-style:outset;
+    border-width: 10px;
+    box-shadow:3px 3px 10px;
+    margin-left: 38%;
+    border-color:rgb(87, 181, 231);
+    shape-margin: 5px;
+    background-color: green;
+}
+
+.lista{
+    margin: 0 0 20px 0;
+    padding: 0px;
+    margin-left: 15px;
+}
+
+.lista a{
+    padding-left: 15px;
+    background:rgb(1, 75, 75);
+    border:2px solid #00c9fc;
+    color: rgba(20, 235, 0, 0.932);
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#sobre{
+    background-color:aqua;
+    text-align:center;
+    font-size: 25px;
+    font-weight:bolder;
+    color: navy;
+    font-family: 'Audiowide', cursive;
+}
+
+p{
+    font-size: 20px;
+    }
+    
+h3{
+    font-size: 15px;
+    background-color:rgb(10, 229, 236);
+    font-family: 'Audiowide', cursive;
+    }
+
+
+#efeito-fundo {
+    background: rgba(179, 236, 179, 0.767);
+    margin-left: 220px;
+}
+
+#rosetta{
+    width: 200px;
+    height: 100px;
+    float: left;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 50px;
+    object-fit: cover;
+    object-position: top;
+}
+
+#luta{
+    width: 200px;
+    height: 120px;
+    float: left;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 50px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.lista li{
+    display: inline;
+    margin-right: 5px;
+    
+}
+
+#apresentacao{
+    text-align: center;
+    font-size: 25px;
+    color:indigo;
+    text-decoration: none;
+    font-family: 'Audiowide', cursive;
+}   
+
+#ordenada li{
+    margin-left: 25px;
+}
+
+#lista-passatempos li{
+    list-style: none;
+    margin-bottom: 0px;
+    margin-left: 35px;
+}
+
+#lista-passatempos .impar{
+    color:indigo;
+    padding-left: 0px;
+}
+
+#lista-passatempos .par{
+    padding-left: 30px;
+}
+
+body {
+font-family: 'Hind Siliguri', sans-serif;
+font-family: 'Baloo Chettan 2', cursive;
+background-image: url(3325193.jpg);
+background-repeat:repeat-y;
+background-size: contain;
+color: #554f4c;
+margin: 0;   
+}    
+
+#trybe{
+    color: green;
+    text-decoration:wavy;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#link-final{
+    text-align: center;
+}
