@@ -1,4 +1,4 @@
-let piece = "king";
+let piece = prompt("what is the piece?");
 
 let king="one square all direction";
 let queen="any number of squares all direction";
