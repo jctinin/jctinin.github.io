@@ -1,6 +1,8 @@
 let x=5;
 let y=10;
 
-let div = x/y;
+function divisao(x,y){
+return x/y;
+}
 
-console.log(div);
+console.log(divisao(x,y));

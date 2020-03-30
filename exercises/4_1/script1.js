@@ -1,6 +1,10 @@
+
+
 let x=5;
 let y=10;
 
-let soma = x+y;
+function soma(num1,num2){
+    return num1+num2;
+}
 
-console.log(soma);
+console.log(soma(x,y));

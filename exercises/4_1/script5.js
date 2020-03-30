@@ -1,6 +1,8 @@
 let x=5;
 let y=10;
 
-let mod = x%y;
+function modulo(x,y){
+return x%y;
+}
 
-console.log(mod);
+console.log(modulo(x,y));

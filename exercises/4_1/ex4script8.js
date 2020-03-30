@@ -1,5 +1,6 @@
-let num=0;
 
+
+function negativoPositivo(num){
 
 if(num<0){
     console.log("negative");
@@ -8,5 +9,6 @@ if(num<0){
 }else{
     console.log("zero");
 }
+}
 
-
+negativoPositivo(-15);

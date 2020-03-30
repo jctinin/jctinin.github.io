@@ -1,6 +1,8 @@
-let x=5;
-let y=10;
+let n1=5;
+let n2=10;
 
-let sub = x-y;
+function subtrai(x,y){
+return x-y;
+}
 
-console.log(sub);
+console.log(subtrai(n1,n2));
