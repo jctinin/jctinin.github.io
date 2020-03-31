@@ -9,3 +9,5 @@ let info = {
   for(valores in info){
       console.log(valores);
   }
+
+  
