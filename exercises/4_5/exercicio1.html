@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 4.5</title>
     <style>
+
       div {
         border-color: black;
         border-style: solid;
@@ -58,15 +59,50 @@
     <script>
       // COLOQUE SEU CÓDIGO AQUI
 
+
+
         let primeiro = document.createElement('h1');
         primeiro.innerHTML='Exercício 4.5 - JavaScript DOM';
         document.body.appendChild(primeiro);
 
-        let div = document.createElement('div');
-        div.className="main-content";
-        document.body.appendChild(div);
+        let firstDiv = document.createElement('div');
+        firstDiv.className="main-content";
+        document.body.appendChild(firstDiv);
 
-        
+        let childDiv = document.createElement('div');
+        childDiv.className="center-content";
+        firstDiv.appendChild(childDiv);
+
+        let childP = document.createElement('p');
+        childP.innerHTML="Filho da tag p"
+        childDiv.appendChild(childP);
+
+        let leftChild = document.createElement('div');
+        leftChild.className="left-content";
+        firstDiv.appendChild(leftChild);
+
+        let rightChild = document.createElement('div');
+        rightChild.className="right-content";
+        firstDiv.appendChild(rightChild);
+
+        let image = document.createElement('img');
+        image.innerHTML="small-image"
+        image.src="https://picsum.photos/200";
+        leftChild.appendChild(image);
+
+        let vector = [um, dois, três, quatro, cinco, seis, sete, oito, nove, dez];
+
+        let list = document.createElement('ul');
+            for(item in vector){
+                let row = document.createElement('li');
+                row.innerHTML = item;
+                list.appendChild(row);
+            }
+                              
+            rightChild.appendChild(list);
+           
+
+
 
     </script>
   </body>
