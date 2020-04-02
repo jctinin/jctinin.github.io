@@ -102,7 +102,17 @@
         for(i=0; i<3; i++){   
         let tags = document.createElement('h3')
             firstDiv.appendChild(tags);
+            tags.className="title";
         }
+
+        primeiro.className="title";
+
+        firstDiv.removeChild(leftChild);
+
+        rightChild.style.marginRight='auto';
+
+        document.querySelector(".center-content").parentNode.style.backgroundColor='green';
+
 
     </script>
   </body>
