@@ -90,19 +90,19 @@
         image.src="https://picsum.photos/200";
         leftChild.appendChild(image);
 
-        let vector = [um, dois, três, quatro, cinco, seis, sete, oito, nove, dez];
-
+        let vector = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
         let list = document.createElement('ul');
             for(item in vector){
                 let row = document.createElement('li');
-                row.innerHTML = item;
+                row.innerHTML = vector[item];
                 list.appendChild(row);
-            }
-                              
+            }          
             rightChild.appendChild(list);
            
-
-
+        for(i=0; i<3; i++){   
+        let tags = document.createElement('h3')
+            firstDiv.appendChild(tags);
+        }
 
     </script>
   </body>
