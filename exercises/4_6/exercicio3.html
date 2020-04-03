@@ -50,8 +50,13 @@
                     alert('$' + price + ' Off!');
                 }
 
-                
-                
+                function novaImagem(){
+                    document.querySelector('#fight-club').src = 'https://1.bp.blogspot.com/-kC-DA-u6Pxo/VlYAYyNJhJI/AAAAAAAAShg/Zvfc_Z4cNh8/s1600/fight-club%2Bposter.jpg';
+                }
+
+                function velhaImagem(){
+                    document.querySelector('#fight-club').src = "https://uauposters.com.br/media/catalog/product/cache/1/image/333x500/9df78eab33525d08d6e5fb8d27136e95/2/0/201906131386-uau-posters-filmes-alternativo-clube-da-luta-fight-club.jpg";
+                }
                 
                 </script>
                 
@@ -65,9 +70,10 @@
 						<p><a href="http://www.htmlite.com/JS019.php" target="_blank">This tutorial</a> may be of help!</p>   
 					</li>
 				</ol>            
-            
-            
-            
+                
+                <center>
+                <img src="https://uauposters.com.br/media/catalog/product/cache/1/image/333x500/9df78eab33525d08d6e5fb8d27136e95/2/0/201906131386-uau-posters-filmes-alternativo-clube-da-luta-fight-club.jpg" alt="fight_club" id="fight-club" width="300px" onmouseover="novaImagem()" onmouseout="velhaImagem()" >
+            </center>
 			</div>
         </div>
 
