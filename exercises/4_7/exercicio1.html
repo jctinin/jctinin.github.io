@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My storage Test Page</title>
+<style>
+
+#intro{
+    width: 450px;
+    height: 200px;
+    margin-top: 100px;
+}
+
+#paragrafo1{
+    width: 650px;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: ;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    background-color: aqua;
+}
+
+</style>
+<script>
+window.onload = function(){
+if(typeof(Storage)!=="undefined"){
+
+    
+//Caixas de texto   
+
+    let inputFundo = document.querySelector("#cor-fundo");
+    let inputCorTexto = document.querySelector("#cor-texto");
+    let inputTamanhoTexto = document.querySelector("#tamanho");
+    let inputEspacamento = document.querySelector("#espaco");
+    let inputFonteTipo = document.querySelectorAll("#family");
+    
+//BOTÕES
+
+    let botaoCorFundo = document.querySelector("#corFundoButton");
+    let corTextoBotao = document.querySelector("#corTextoButton");
+    let botaoTamanhoText = document.querySelector("#botaoTamanho");
+    let botaoEspacoText = document.querySelector("#botaoEspaco");
+    let botaoFonteText = document.querySelector("#botaoFonte");
+
+//AÇÕES    
+
+    botaoCorFundo.addEventListener('click',function(){
+        document.body.style.backgroundColor = inputFundo.value;
+        localStorage.setItem("bgcolor",inputFundo.value);
+        console.log(inputFundo.value);
+    });
+
+    corTextoBotao.addEventListener('click', function(){
+        document.body.style.color = inputCorTexto.value;
+        localStorage.setItem("textColor",inputCorTexto.value);
+    });
+
+    botaoTamanhoText.addEventListener('click',function(){
+        let textoPrincipal = document.querySelector("#paragrafo1");
+        textoPrincipal.style.fontSize = (inputTamanhoTexto.value +'px');
+        localStorage.setItem("textSize", inputTamanhoTexto.value);
+    });
+
+    botaoEspacoText.addEventListener('click', function(){
+        let textoPrincipal = document.querySelector("#paragrafo1");
+        textoPrincipal.style.lineHeight = (inputEspacamento.value + "px");
+    })
+
+    botaoFonteText.addEventListener('click', function(){
+        textoPrincipal.style.fontFamily = inputFonteTipo.value;
+
+    })
+}
+}
+</script>
+
+</head>
+<body>
+    
+<header>
+    <center>
+<h1>THE VENUS PROJECT</h1>
+</center>
+</header>
+
+<section>
+<li>
+Fundo de tela: <br>
+<input type=text id="cor-fundo" placeholder="Digite a Cor"><br>
+<button id="corFundoButton" >Enviar</button>
+</li>
+<li>
+    Cor do texto: <br>
+    <input type="text" id="cor-texto" placeholder="Digite a Cor"><br>
+    <button id="corTextoButton">Enviar</button>
+    </li>
+    <li>
+        Tamanho da fonte: <br>
+    <input type="text" id="tamanho" placeholder="Digite o tamanho"><br>
+    <button id="botaoTamanho">Enviar</button>
+        </li>
+    <li>
+        Espaçamento entre as linhas: <br>
+    <input type="text" id="espaco" placeholder="Digite o espaçamento"><br>
+    <button id="botaoEspaco">Enviar</button>
+            </li>
+    <li>
+        Fonte: <br>
+    <input type="text" id="family" placeholder="Digite a fonte"><br>
+    <button id="botaoFonte">Enviar</button>
+                </li>
+
+
+
+</section>
+
+<section>
+<center>
+<div id="intro">
+
+<h3>The Venus Project is a non-profit organization that presents a new socio-economic
+    model utilizing science and technology toward social betterment 
+    to achieve a sustainable civilization of abundance for all, without exception.</h3>
+
+</div>
+</center>
+</section>
+
+
+<section>
+
+<center>
+    <div id="paragrafo1">
+    
+<h4>
+    <p> The Venus Project is a non-profit organization that recognizes the important
+     connection between global resource mismanagement and problems such as war,
+    climate change, poverty, and hunger. In the broader context, these are all
+    detrimental results of the current socio-economic operating system. In response 
+    to these challenges, our organization presents solutions through the holistic 
+    application of science and technology; two areas in which recent advancements 
+    hold the potential to make far-reaching positive impacts.
+</p>
+<p>However, while technology may succeed in gradually alleviating some of
+     these problems, they cannot be resolved by simply addressing symptoms, as we
+      do now, because they are byproducts of a much larger problem. Another major issue
+       is that business interests currently require short-term planning and
+        timely returns on investments. For these reasons, in addition to our expanded 
+        technical approach, our proposals include an alternative economic model which 
+        overcomes these artificial barriers to planetary wellbeing.</p>
+
+<p>Our methodologies are designed to realize the full potential of science and
+     technology to achieve social betterment for all living systems. We advocate 
+     new ways of thinking and living to enable human beings, technology, and
+      nature to progress sustainably.</p>
+
+
+</h4>
+</div>
+
+</center>
+</section>
+
+
+<footer>
+    <center>More Information:<a href="https://www.thevenusproject.com/">The Venus Project</a></center>
+</footer>
+
+</body>
+</html>
