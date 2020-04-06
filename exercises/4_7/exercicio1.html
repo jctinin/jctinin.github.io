@@ -6,86 +6,140 @@
     <title>My storage Test Page</title>
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+/* font-family: 'Comic Neue', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Roboto+Mono&display=swap');
+/* 
+font-family: 'Roboto Mono', monospace;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+/*
+font-family: 'Rochester', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+/* font-family: 'Alef', sans-serif; */
+
 #intro{
     width: 450px;
     height: 200px;
     margin-top: 100px;
 }
 
-#paragrafo1{
-    width: 650px;
-}
-
-body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-family: ;
-}
-
 li{
     list-style-type: none;
-}
-
-body{
-    background-color: aqua;
 }
 
 </style>
 <script>
 window.onload = function(){
+//VERIFICA SE JÁ EXISTE VALORES NA WEBSTORAGE
+//VERIFY IF WEBSTORAGE ALREADY EXISTS
 if(typeof(Storage)!=="undefined"){
-
     
-//Caixas de texto   
+//UTILIZA OS VALORES DA WEBSTORAGE NA ABERTURA DA PÁGINA
+//USING THE LOCALSTORAGE VALUES THAT WAS ALREADY STORAGED
+    document.body.style.backgroundColor = localStorage.bgcolor;
+    document.body.style.color = localStorage.textColor;
+    document.body.style.fontSize = localStorage.textSize + "px";
+    document.body.style.lineHeight = localStorage.lineSize + "px";
+    document.body.style.fontFamily = localStorage.fontStyle;
+    
+}
+//VARIÁVEIS DA CAIXA DE TEXTO
+//INPUT TEXT VARIABLES 
 
     let inputFundo = document.querySelector("#cor-fundo");
     let inputCorTexto = document.querySelector("#cor-texto");
     let inputTamanhoTexto = document.querySelector("#tamanho");
     let inputEspacamento = document.querySelector("#espaco");
-    let inputFonteTipo = document.querySelectorAll("#family");
     
-//BOTÕES
+//VARIÁVEIS DOS BOTÕES
+//BUTTON VARIABLES
 
-    let botaoCorFundo = document.querySelector("#corFundoButton");
-    let corTextoBotao = document.querySelector("#corTextoButton");
-    let botaoTamanhoText = document.querySelector("#botaoTamanho");
-    let botaoEspacoText = document.querySelector("#botaoEspaco");
-    let botaoFonteText = document.querySelector("#botaoFonte");
-
+    let botaoCorFundo = document.querySelector("#corFundoButton"); //BOTÃO PARA AJUSTAR A COR DO FUNDO DE TELA
+    let corTextoBotao = document.querySelector("#corTextoButton"); //BOTÃO PARA AJUSTAR A COR DO TEXTO
+    let botaoTamanhoText = document.querySelector("#botaoTamanho"); //BOTÃO PARA AJUSTAR O TAMANHO DA FONTE
+    let botaoEspacoText = document.querySelector("#botaoEspaco"); //BOTÃO DE AJUSTAR O ESPAÇAMENTO ENTRE LINHAS
+   
 //AÇÕES    
+//ACTIONS
 
+//FUNÇAO PARA A COR DE FUNDO DA TELA
+//BACKGROUND COLOR FUNCTION
     botaoCorFundo.addEventListener('click',function(){
-        document.body.style.backgroundColor = inputFundo.value;
         localStorage.setItem("bgcolor",inputFundo.value);
-        console.log(inputFundo.value);
+        document.body.style.backgroundColor = localStorage.bgcolor;
     });
 
+//FUNÇÃO PARA O BOTÃO DE COR DO TEXTO
+//COLOR BUTTON FUNCTION
     corTextoBotao.addEventListener('click', function(){
         document.body.style.color = inputCorTexto.value;
         localStorage.setItem("textColor",inputCorTexto.value);
     });
 
+//FUNCAO PARA O TAMANHO DO TEXTO
+//TEXT SIZE FUNCTION
     botaoTamanhoText.addEventListener('click',function(){
-        let textoPrincipal = document.querySelector("#paragrafo1");
-        textoPrincipal.style.fontSize = (inputTamanhoTexto.value +'px');
+        document.body.style.fontSize = inputTamanhoTexto.value + "px";
         localStorage.setItem("textSize", inputTamanhoTexto.value);
     });
 
+//FUNÇÃO PARA O BOTÃO DE ESPAÇAMENTO DE LINHAS
+//SPACE LINE BUTTON FUNCTION
     botaoEspacoText.addEventListener('click', function(){
-        let textoPrincipal = document.querySelector("#paragrafo1");
-        textoPrincipal.style.lineHeight = (inputEspacamento.value + "px");
-    })
-
-    botaoFonteText.addEventListener('click', function(){
-        textoPrincipal.style.fontFamily = inputFonteTipo.value;
-
-    })
+        document.body.style.lineHeight = (inputEspacamento.value + "px");
+        localStorage.setItem("lineSize", inputEspacamento.value);
+    });
+/*
+function trocaFonte(){
+    let optionFont = document.getElementById("estiloFonte"),
+    text = document.getElementById('text');
+    
+    text.style.fontFamily=optionFont.value;
 }
+*/
+
+//ATRIBUINDO SELECT OPTIONS A VARIÁVEL
+//ATTACH SELECT OPTIONS TO VARIABLE
+    let botaoFonteText = document.querySelector("#estiloFonte"); //BOTÃO DE OPÇÕES
+    botaoFonteText.addEventListener('change', trocaFonte);
+    
+//FUNÇÃO DO SELETOR DE ESTILO DE FONTE
+//FUNCTION OF STYLE FONT SELECTOR
+    function trocaFonte(){
+
+        //ATRIBUINDO O VALOR SELECIONADO DO MENU A VARIÁVEL familyFont
+//ATTACH THE SELECTED VALUE OF MENU TO VARIABLE familyFont
+    let familiyFont = botaoFonteText.options[botaoFonteText.selectedIndex].value;
+
+//PRESTAR ATENÇÃO NOS VALORES DAS TAGS
+//PAY ATENTION IN VALUE AND FONT NAMES
+    if(familiyFont=="Comic Neue"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Comic Neue';
+
+    }else if(familiyFont=="Roboto Mono"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Roboto Mono';
+
+    }else if(familiyFont=="Rochester"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Rochester, cursive';
+
+    }else if(familiyFont=="Alef"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Alef, sans-serif';
+    }
+    }
 }
+
 </script>
 
 </head>
 <body>
-    
+    <div id="text">
 <header>
     <center>
 <h1>THE VENUS PROJECT</h1>
@@ -98,6 +152,10 @@ Fundo de tela: <br>
 <input type=text id="cor-fundo" placeholder="Digite a Cor"><br>
 <button id="corFundoButton" >Enviar</button>
 </li>
+
+<!--INPUT COM BOTÕES
+    INPUT WITH BUTTONS-->
+
 <li>
     Cor do texto: <br>
     <input type="text" id="cor-texto" placeholder="Digite a Cor"><br>
@@ -117,21 +175,34 @@ Fundo de tela: <br>
         Fonte: <br>
     <input type="text" id="family" placeholder="Digite a fonte"><br>
     <button id="botaoFonte">Enviar</button>
-                </li>
+    </li>
 
+    <li>
+        <label for="fontStyle">Escolha um estilo de fonte:</label>
+        <br>
 
+    <!--BOTÃO SELECT COM VALUE NO MESMO NOME DA FONTE
+        SELECT BUTTON WITH VALUE SAME AS FONT NAME-->
+        <select id="estiloFonte">
+           <option>Select Font</option>
+          <option value="Comic Neue">Comic</option>
+          <option value="Roboto Mono">Roboto</option>
+          <option value="Rochester">Rochester</option>
+          <option value="Alef">Alef</option>
+        </select>
+
+    </li>
 
 </section>
 
 <section>
 <center>
-<div id="intro">
+
 
 <h3>The Venus Project is a non-profit organization that presents a new socio-economic
     model utilizing science and technology toward social betterment 
     to achieve a sustainable civilization of abundance for all, without exception.</h3>
 
-</div>
 </center>
 </section>
 
@@ -174,6 +245,6 @@ Fundo de tela: <br>
 <footer>
     <center>More Information:<a href="https://www.thevenusproject.com/">The Venus Project</a></center>
 </footer>
-
+</div>
 </body>
 </html>
