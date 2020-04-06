@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My storage Test Page</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+/* font-family: 'Comic Neue', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Roboto+Mono&display=swap');
+/* 
+font-family: 'Roboto Mono', monospace;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+/*
+font-family: 'Rochester', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+/* font-family: 'Alef', sans-serif; */
+
+#intro{
+    width: 450px;
+    height: 200px;
+    margin-top: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+
+</style>
+<script>
+window.onload = function(){
+//VERIFICA SE JÁ EXISTE VALORES NA WEBSTORAGE
+//VERIFY IF WEBSTORAGE ALREADY EXISTS
+if(typeof(Storage)){
+    
+//UTILIZA OS VALORES DA WEBSTORAGE NA ABERTURA DA PÁGINA
+//USING THE LOCALSTORAGE VALUES THAT WAS ALREADY STORAGED
+    document.body.style.backgroundColor = localStorage.bgcolor;
+    document.body.style.color = localStorage.textColor;
+    document.body.style.fontSize = localStorage.textSize + "px";
+    document.body.style.lineHeight = localStorage.lineSize + "px";
+    document.body.style.fontFamily = localStorage.fontStyle;
+    
+}
+//VARIÁVEIS DA CAIXA DE TEXTO
+//INPUT TEXT VARIABLES 
+
+    let inputFundo = document.querySelector("#cor-fundo");
+    let inputCorTexto = document.querySelector("#cor-texto");
+    let inputTamanhoTexto = document.querySelector("#tamanho");
+    let inputEspacamento = document.querySelector("#espaco");
+    
+//VARIÁVEIS DOS BOTÕES
+//BUTTON VARIABLES
+
+    let botaoCorFundo = document.querySelector("#corFundoButton"); //BOTÃO PARA AJUSTAR A COR DO FUNDO DE TELA
+    let corTextoBotao = document.querySelector("#corTextoButton"); //BOTÃO PARA AJUSTAR A COR DO TEXTO
+    let botaoTamanhoText = document.querySelector("#botaoTamanho"); //BOTÃO PARA AJUSTAR O TAMANHO DA FONTE
+    let botaoEspacoText = document.querySelector("#botaoEspaco"); //BOTÃO DE AJUSTAR O ESPAÇAMENTO ENTRE LINHAS
+   
+//AÇÕES    
+//ACTIONS
+
+//FUNÇAO PARA A COR DE FUNDO DA TELA
+//BACKGROUND COLOR FUNCTION
+    botaoCorFundo.addEventListener('click',function(){
+        localStorage.setItem("bgcolor",inputFundo.value);
+        document.body.style.backgroundColor = localStorage.bgcolor;
+    });
+
+//FUNÇÃO PARA O BOTÃO DE COR DO TEXTO
+//COLOR BUTTON FUNCTION
+    corTextoBotao.addEventListener('click', function(){
+        document.body.style.color = inputCorTexto.value;
+        localStorage.setItem("textColor",inputCorTexto.value);
+    });
+
+//FUNCAO PARA O TAMANHO DO TEXTO
+//TEXT SIZE FUNCTION
+    botaoTamanhoText.addEventListener('click',function(){
+        document.body.style.fontSize = inputTamanhoTexto.value + "px";
+        localStorage.setItem("textSize", inputTamanhoTexto.value);
+    });
+
+//FUNÇÃO PARA O BOTÃO DE ESPAÇAMENTO DE LINHAS
+//SPACE LINE BUTTON FUNCTION
+    botaoEspacoText.addEventListener('click', function(){
+        document.body.style.lineHeight = (inputEspacamento.value + "px");
+        localStorage.setItem("lineSize", inputEspacamento.value);
+    });
+/*
+function trocaFonte(){
+    let optionFont = document.getElementById("estiloFonte"),
+    text = document.getElementById('text');
+    
+    text.style.fontFamily=optionFont.value;
+}
+*/
+
+//ATRIBUINDO SELECT OPTIONS A VARIÁVEL
+//ATTACH SELECT OPTIONS TO VARIABLE
+    let botaoFonteText = document.querySelector("#estiloFonte"); //BOTÃO DE OPÇÕES
+    botaoFonteText.addEventListener('change', trocaFonte);
+    
+//FUNÇÃO DO SELETOR DE ESTILO DE FONTE
+//FUNCTION OF STYLE FONT SELECTOR
+    function trocaFonte(){
+
+        //ATRIBUINDO O VALOR SELECIONADO DO MENU A VARIÁVEL familyFont
+//ATTACH THE SELECTED VALUE OF MENU TO VARIABLE familyFont
+    let familiyFont = botaoFonteText.options[botaoFonteText.selectedIndex].value;
+
+//PRESTAR ATENÇÃO NOS VALORES DAS TAGS
+//PAY ATENTION IN VALUE AND FONT NAMES
+    if(familiyFont=="Comic Neue"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Comic Neue';
+
+    }else if(familiyFont=="Roboto Mono"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Roboto Mono';
+
+    }else if(familiyFont=="Rochester"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Rochester, cursive';
+
+    }else if(familiyFont=="Alef"){
+        localStorage.setItem("fontStyle",familiyFont);
+        document.body.style.fontFamily = 'Alef, sans-serif';
+    }
+    }
+}
+
+</script>
+
+</head>
+<body>
+    <div id="text">
+<header>
+    <center>
+<h1>THE VENUS PROJECT</h1>
+</center>
+</header>
+
+<section>
+<li>
+Fundo de tela: <br>
+<input type=text id="cor-fundo" placeholder="Digite a Cor"><br>
+<button id="corFundoButton" >Enviar</button>
+</li>
+
+<!--INPUT COM BOTÕES
+    INPUT WITH BUTTONS-->
+
+<li>
+    Cor do texto: <br>
+    <input type="text" id="cor-texto" placeholder="Digite a Cor"><br>
+    <button id="corTextoButton">Enviar</button>
+    </li>
+    <li>
+        Tamanho da fonte: <br>
+    <input type="text" id="tamanho" placeholder="Digite o tamanho"><br>
+    <button id="botaoTamanho">Enviar</button>
+        </li>
+    <li>
+        Espaçamento entre as linhas: <br>
+    <input type="text" id="espaco" placeholder="Digite o espaçamento"><br>
+    <button id="botaoEspaco">Enviar</button>
+            </li>
+    <li>
+        Fonte: <br>
+    <input type="text" id="family" placeholder="Digite a fonte"><br>
+    <button id="botaoFonte">Enviar</button>
+    </li>
+
+    <li>
+        <label for="fontStyle">Escolha um estilo de fonte:</label>
+        <br>
+
+    <!--BOTÃO SELECT COM VALUE NO MESMO NOME DA FONTE
+        SELECT BUTTON WITH VALUE SAME AS FONT NAME-->
+        <select id="estiloFonte">
+           <option>Select Font</option>
+          <option value="Comic Neue">Comic</option>
+          <option value="Roboto Mono">Roboto</option>
+          <option value="Rochester">Rochester</option>
+          <option value="Alef">Alef</option>
+        </select>
+
+    </li>
+
+</section>
+
+<section>
+<center>
+
+
+<h3>The Venus Project is a non-profit organization that presents a new socio-economic
+    model utilizing science and technology toward social betterment 
+    to achieve a sustainable civilization of abundance for all, without exception.</h3>
+
+</center>
+</section>
+
+
+<section>
+
+<center>
+    <div id="paragrafo1">
+    
+<h4>
+    <p> The Venus Project is a non-profit organization that recognizes the important
+     connection between global resource mismanagement and problems such as war,
+    climate change, poverty, and hunger. In the broader context, these are all
+    detrimental results of the current socio-economic operating system. In response 
+    to these challenges, our organization presents solutions through the holistic 
+    application of science and technology; two areas in which recent advancements 
+    hold the potential to make far-reaching positive impacts.
+</p>
+<p>However, while technology may succeed in gradually alleviating some of
+     these problems, they cannot be resolved by simply addressing symptoms, as we
+      do now, because they are byproducts of a much larger problem. Another major issue
+       is that business interests currently require short-term planning and
+        timely returns on investments. For these reasons, in addition to our expanded 
+        technical approach, our proposals include an alternative economic model which 
+        overcomes these artificial barriers to planetary wellbeing.</p>
+
+<p>Our methodologies are designed to realize the full potential of science and
+     technology to achieve social betterment for all living systems. We advocate 
+     new ways of thinking and living to enable human beings, technology, and
+      nature to progress sustainably.</p>
+
+
+</h4>
+</div>
+
+</center>
+</section>
+
+
+<footer>
+    <center>More Information:<a href="https://www.thevenusproject.com/">The Venus Project</a></center>
+</footer>
+</div>
+</body>
+</html>
