@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+    <script src="dist/js/DatePickerX.min.js"></script>
+    <script src="js/just-validate.min.js"></script>    
+
+</head>
+<body>
+    <title>Forms no Bootstrap</title>
+    <h1>Forms no Bootstrap</h1>
+
+    <form action="POST" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
+    <fieldset> <legend>Conta:</legend>
+    <div class="form-group">
+        <label for="full-name">Your complete name:</label>
+        <input type="text" class="form-control" name="full-name" maxlength="40" required>
+    </div>
+        <br>
+    
+    <div class="form-group">  
+        <label for="email">E-mail:</label>
+        <input type="email" data-validate-field="email" class="form-control" name="e-mail" maxlength="50" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    </fieldset>
+    
+    <div class="row">
+        <div class="col">
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" maxlength="11" required>
+    </div>
+    
+    <div class="col">
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" maxlength="200" required>
+    </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" maxlength="28" required>
+    </div class="form-group">
+    
+    <div class="form-group">
+    <label id="estados">Estado:</label>
+    <select class="form-control form-control-sm" name="estados" id="todos-estados"></select>
+    </div>
+
+    <div class="form-check">
+        <input type="radio" name="tipo-casa" id="casa" value="casa">
+        <label for="tipo-casa">Casa</label>
+        <input type="radio" name="tipo-casa" id="apartamento" value="apartamento">
+        <label for="tipo-casa">Apartamento</label>
+    </div>
+   
+    </fieldset>
+
+    <fieldset>
+
+    <div class="form-group">
+        <label for="resume">Resumo do currículo:</label>
+
+    </div>
+    <div class="form-group">
+
+        <textarea id="resume" name="resume" rows="8" cols="50" maxlength="1000" required>
+        Digite aqui um resumo do seu currículo
+        </textarea>
+        <br>
+    </div class="form-group">
+    
+    <div class="form-group">
+        <label for="cargo">Cargo:</label>
+    </div>
+    <div class="form-group">
+        <input type="text" name="cargo" id="cargo" required>
+    </div class="form-group">
+    
+    <div class="form-group">
+        <label for="descricao-cargo">Descrição do cargo</label>
+    </div>
+     
+    <div class="form-group">
+ 
+        <textarea name="descricao-cargo" id="descricao-cargo" cols="30" rows="10" maxlength="500" required>Digite aqui as atividades exercidas</textarea>
+    </div class="form-group">
+        <br>
+        <label for="data">Nascimento:</label>
+        <input type="date" name="data" id="date" pattern="">
+
+    </fieldset>
+
+    <input class="btn btn-primary" type="submit" value="enviar" id="enviar">
+</form>
+    <script src="script.js"></script>
+
+</body>
+</html>
