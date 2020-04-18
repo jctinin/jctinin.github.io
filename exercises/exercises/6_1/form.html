@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <fieldset>
+        <label for="full-name">Your complete name:</label>
+        <input type="text" name="full-name" maxlength="40" required>
+        <br>
+        
+        <label for="email">E-mail</label>
+        <input type="email" name="e-mail" maxlength="50" required>
+        
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" maxlength="11" required>
+
+        <label for="endereco">Endereço</label>
+        <input type="text" name="endereco" maxlength="200" required>
+
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" maxlength="28" required>
+
+    <label id="estados">Estado:</label>
+    <select name="estados" id="todos-estados"></select>
+
+        <input type="radio" name="tipo-casa" id="casa" value="casa">
+        <label for="tipo-casa">Casa</label>
+        <input type="radio" name="tipo-casa" id="apartamento" value="apartamento">
+        <label for="tipo-casa">Apartamento</label>
+
+    </fieldset>
+
+    <fieldset>
+        <label for="resume">Resumo do currículo:</label>
+
+        <textarea id="resume" name="resume" rows="8" cols="50" maxlength="1000" required>
+        Digite aqui um resumo do seu currículo
+        </textarea>
+        <br>
+        <label for="cargo">Cargo</label>
+        <input type="text" name="cargo" id="cargo" required>
+
+        <label for="descricao-cargo">Descrição do cargo</label>
+        <textarea name="descricao-cargo" id="descricao-cargo" cols="30" rows="10" maxlength="500" required></textarea>
+
+        <br>
+        <label for="data">Nascimento:</label>
+        <input type="text" name="data" id="date" pattern="\([0-31]{2}\)">
+
+    </fieldset>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
