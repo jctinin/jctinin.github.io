@@ -36,14 +36,80 @@
       height: 50px;
     }
 
-    @keyframes slidein{
+    @keyframes slidein {
         from{
-            margin-left: 100%;
-        }
-        to{
             margin-left: 0%;
         }
+        to{
+            margin-left: 95%;
+        }
     }
+    
+
+    @keyframes sizer {
+      from{
+        width: 100%;
+      }
+      to{
+        width: 10%;
+      }
+    }
+
+    @keyframes changeColorOne {
+      from {
+        background-color: red;
+      }
+      to{
+        background-color: yellow;
+      }
+    }
+
+    @keyframes colorMaker {
+     
+      25%{
+        background-color:yellow ;
+      }
+      50%{
+        background-color: aqua;
+      }
+      75%{
+        background-color: chartreuse;
+      }
+      100%{
+        background-color: red;
+      }
+    }
+
+    @keyframes ghostOff{
+      from {
+        opacity: 100%;
+      }
+      to {
+        opacity: 0%;
+      }
+
+    }
+
+    @keyframes colorMaker2 {
+      0%{
+        background-color: blue;
+        width: 100%;
+      }
+      25%{
+        background-color:yellow ;
+      }
+      50%{
+        background-color: aqua;
+      }
+      75%{
+        background-color: chartreuse;
+      }
+      100%{
+        background-color: red;
+        width: 10%;
+      }
+    }
+
 
   </style>
 </head>
@@ -120,17 +186,95 @@
     //exercício 1
 
 var ex1 = document.querySelector("#exercise-1");
-ex1.style.animation = 'slidein 3000ms ease-out reverse';
+ex1.style.animation = 'slidein 3000ms ease-out';
 ex1.style.animationDelay = '1000ms'
 
 var ex2 = document.querySelector("#exercise-2");
-ex2.style.animation = 'slidein 2000ms ease-out reverse';
-ex2.style.animationDelay = '3000ms';
+ex2.style.animation = 'slidein 1000ms ease-out';
+ex2.style.animationDelay = '1000ms';
 ex2.style.animationFillMode = 'forwards';
 
+//exercício 2 e 3
+var ex3 = document.querySelector("#exercise-3");
+ex3.style.animation = 'slidein 1000ms ease-out';
+ex3.style.animationDelay = '1000ms';
+ex3.style.animationFillMode = 'forwards';
+ex3.style.animationIterationCount = '2';
+ex3.style.animationDirection = 'alternate';
+/* ex3.style.animationIterationCount = 'infinite' */
 
+//exercicio 4
+var ex4 = document.querySelector("#exercise-4");
+ex4.addEventListener('mouseover', function(){
+    console.log("função chamando");
+    ex4.style.animation = 'slidein 5000ms ease-out';
+});
 
+//exercício 5
+var ex5 = document.querySelector("#exercise-5");
+var sec5 = document.querySelector("#section-5");
+sec5.addEventListener('mouseover', function(){
+    ex5.style.animation = 'slidein 5000ms ease-out';
+});
 
+//exercício 6
+var ex6 = document.querySelector("#exercise-6");
+var div6 = document.querySelector("#exercise-6-square");
+div6.addEventListener('mouseover', function(){
+    div6.style.position = 'absolute'
+    ex6.style.animation = 'slidein 5000ms ease-out reverse';
+});
+
+//exercício 7
+var ex7 = document.querySelector("#exercise-7");
+console.log("funfa")
+ex7.style.animation = 'sizer 10000ms ease-out reverse'
+ex7.style.animationIterationCount = 'infinite'
+
+//exercício 8
+var ex8 = document.querySelector("#exercise-8");
+console.log("funfa 8")
+ex8.style.animation = 'changeColorOne 4000ms'
+ex8.style.animationIterationCount = 'infinite'
+
+//exercício 9
+var ex9 = document.querySelector("#exercise-9");
+ex9.style.animation = 'colorMaker 4000ms';
+ex9.style.animationIterationCount = 'alternate';
+ex9.style.animationIterationCount = 'infinite';
+
+//exercício 10
+var ex10 = document.querySelector("#exercise-10");
+ex10.style.animation = 'colorMaker2 10000ms reverse'
+ex10.style.animationIterationCount = 'infinite'
+
+//exercício 11
+var ex111 = document.querySelector("#exercise-11_1");
+ex111.style.animation = 'slidein 3000ms linear';
+ex111.style.animationIterationCount = 'infinite';
+
+var ex112 = document.querySelector("#exercise-11_2");
+ex112.style.animation = 'slidein 3000ms ease-in-out'
+ex112.style.animationIterationCount = 'infinite'
+
+var ex113 = document.querySelector("#exercise-11_3");
+ex113.style.animation = 'slidein 3000ms ease-in'
+ex113.style.animationIterationCount = 'infinite'
+
+var ex114 = document.querySelector("#exercise-11_4");
+ex114.style.animation = 'slidein 3000ms ease-out';
+ex114.style.animationIterationCount = 'infinite';
+
+var ex115 = document.querySelector("#exercise-11_5");
+ex115.style.animation = 'slidein 3000ms ease-in-out'
+ex115.style.animationIterationCount = 'infinite'
+
+//exercício 12
+var ex12 = document.querySelector("#exercise-12");
+ex12.addEventListener('mousedown', function(){
+  ex12.style.animation = 'ghostOff 1000ms'
+  ex12.style.animationFillMode = 'forwards';
+});
 
 
 </script>
