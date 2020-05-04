@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+var jogos = ['1:1','0:0','3:3','4:4','2:2','1:1','1:1','3:3','2:2','1:3'];
+var jogos1 = ['1:1','2:2','3:3','4:4','2:2','3:3','4:4','3:3','4:4','4:4']
+
+function points(games) {
+  // your code here
+var soma = 0;
+var x = 0;
+var y = 2;
+
+for(let i=0; i<games.length; i++){
+  if(games[i][x] > games[i][y]){
+    soma = soma+3;
+  }else if(games[i][x] < games[i][y]){
+    soma = soma + 0;
+  }else{
+    soma = soma+1;
+}
+
+}
+console.log(soma)
+return soma
+
+}
+
+points(jogos);
+
+points(jogos1);
+
+
+// MESMA SAÍDA
+const points=games=>games.reduce((output,current)=>{
+    return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
+  },0)
+
+//MESMA SAÍDA
+
+const points = g => g.reduce((a, [x, _, y]) => a + (x > y ? 3 : x == y), 0)
+
+
+/* function points(games) {
+  // your code here
+var x = 0;
+var y = 2;
+
+for(let i=0; i<games.length; i++){
+  if(games[i][x] < games[i][y]){
+  var result = games[i][x] + games[i][y]
+  }else{
+      var result = games[i][x] - games[i][y]
+  }
+console.log(result);
+}
+
+}
+ */
+
+
+    </script>
+    
+</body>
+</html>

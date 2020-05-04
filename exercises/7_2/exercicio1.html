@@ -110,7 +110,14 @@
       }
     }
 
+ /*    #exercise-12:active {
+      animation-name: ghostOff;
+      animation-duration: 2s;
+      animation-fill-mode:forwards;
+    }
 
+     */
+   
   </style>
 </head>
 <body>
@@ -208,6 +215,7 @@ var ex4 = document.querySelector("#exercise-4");
 ex4.addEventListener('mouseover', function(){
     console.log("função chamando");
     ex4.style.animation = 'slidein 5000ms ease-out';
+    ex4.style.animationPlayState = 'running';
 });
 
 //exercício 5
@@ -271,12 +279,14 @@ ex115.style.animationIterationCount = 'infinite'
 
 //exercício 12
 var ex12 = document.querySelector("#exercise-12");
-ex12.addEventListener('mousedown', function(){
+
+
+/* function fadeObject(){
   ex12.style.animation = 'ghostOff 1000ms'
   ex12.style.animationFillMode = 'forwards';
-});
-
-
+};
+ 
+ */
 </script>
 
 </body>

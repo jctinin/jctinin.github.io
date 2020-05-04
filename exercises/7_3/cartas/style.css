@@ -1,0 +1,140 @@
+/* *{
+    border: solid black 1px;
+} */
+
+body {
+  background-image: url("BlackJack_table.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(9, 92, 45);
+  display: flex;
+  justify-content: center;
+}
+
+.cartas {
+  width: 120px;
+  height: 170px;
+  padding-top: 15px;    
+}
+
+.grid-de-cartas {
+  padding-top: 15px;
+  height: 110px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-self: center;
+  margin-bottom: 120px;
+}
+
+.mesa {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+}
+
+.table {
+  position: relative;
+}
+
+.verso-da-carta {
+  display: flex;
+  align-self: center;
+  height: 170px;
+  width: 120px;
+}
+
+.rotating:hover {
+  animation: rotatingOver 3s alternate;
+}
+
+@keyframes rotatingOver {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.scaleUp:hover {
+  animation: scaleUp 3s alternate;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+
+.skewDown:hover {
+  animation: skewUp 3s alternate;
+}
+
+@keyframes skewDown {
+  0% {
+    transform: skew(1deg);
+  }
+  100% {
+    transform: skew(-180deg, 180deg);
+  }
+}
+
+.skewUp:hover {
+  animation: skewUp 3s alternate;
+}
+
+@keyframes skewUp {
+  0% {
+    transform: skew(1deg);
+  }
+  100% {
+    transform: skew(180deg, 180deg);
+  }
+}
+
+.squareRotating:hover {
+  animation: squareRotating 3s alternate;
+}
+
+@keyframes squareRotating {
+  0% {
+    transform: rotate3d(1, 1, 1, 150deg);
+  }
+  100% {
+    transform: (rotate3d(-1, -1, -1, 150deg));
+  }
+}
+
+.translateUp:hover {
+  animation: translateUp 3s alternate;
+}
+
+@keyframes translateUp {
+  0% {
+    transform: translateY(1);
+  }
+  100% {
+    transform: translateY(-150px);
+  }
+}
+
+.translateDown:hover {
+  animation: translateDown 3s alternate;
+}
+
+@keyframes translateDown {
+  0% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(150px);
+  }
+}
