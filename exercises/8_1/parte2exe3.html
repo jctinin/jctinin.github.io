@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const num = 8;
+
+ function fatorial(numero){
+    for(let i=0 ; i<numero ; i++){
+        
+        resultado = resultado * (numero-1);
+        console.log(resultado);
+        numero = numero-1;
+        console.log(numero)
+        if(numero <= 1){
+        return resultado;
+        }
+    }
+}
+
+
+//A FUNÇÃO ABAIXO TEM O MESMO RESULTADO
+
+//let fatorial = (numero) => {for(let x=0; x<numero; x++){ let resultado = numero*(numero-1); numero=numero-1; if(numero=1){return resultado}}}
+
+// AGORA TENTANDO UMA FUNÇÃO RECURSIVA
+
+/* function fatorial(x){
+    if(x=1){
+        return 1;
+    }else{
+      return  x * fatorial(x-1);
+    }
+} */
+
+console.log(fatorial(num));
+
+    </script>
+
+</body>
+</html>
