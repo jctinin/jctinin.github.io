@@ -22,7 +22,7 @@ const lesson3 = {
 };
 
 
-const modificaObjeton = (objeto,chave,valor) => {objeto[chave] = valor;}
+const modificaObjeto = (objeto,chave,valor) => {objeto[chave] = valor;}
 
 modificaObjeto(lesson1, 'materia', 'Inglês');
 console.log(lesson1);
