@@ -27,9 +27,7 @@ const lesson1 = {
       if(valorChave == true){
           const valorItem = Object.values(objeto).includes(`${valor}`)
       if(valorChave == true && valorItem == true){
-        return true
-      }else{
-          return false
+    return x && y
       }
       
       }
