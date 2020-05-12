@@ -69,7 +69,7 @@ const books = [
 //Dica: use reduce
 function allNames() {
   // escreva seu código aqui
-const pessoasAutoras = books.filter((book) => book.author.name).map((acc, curr) => acc.author.name)
+const pessoasAutoras = books.filter((book) => book.author.name).map((acc) => acc.author.name)
 console.log(pessoasAutoras)
 
 }
