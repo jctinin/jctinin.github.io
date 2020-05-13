@@ -22,10 +22,6 @@
     /* Escreva uma função shipLength que, dado um objeto representando um navio,
 retorna o comprimento dele, mostrando também a devida unidade de comprimento:*/
 
-//const shipLength = ({ name, length, measurementUnit = "meters" }) =>
-//  `${name} is ${length} ${measurementUnit} long`;
-
-
 // escreva shipLength abaixo
     const shipLength = ({name, length, measurementUnit = 'meters'}) => (`${name} is ${length} ${measurementUnit} long`);
 
