@@ -22,7 +22,7 @@ class App extends Component {
       <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/users" component={Users} />
+      <Route path="/users"  render={(props) => <Users {...props} greetingMessage="Good Morning" />}  />
       </Switch>
       
       </BrowserRouter>
@@ -33,3 +33,5 @@ class App extends Component {
 }
 
 export default App;
+
+//Adicione uma rota que mapeie o caminho de URL “/about” para o componente About. Acesse http://localhost:3000/about para ver se o componente About foi renderizado!
