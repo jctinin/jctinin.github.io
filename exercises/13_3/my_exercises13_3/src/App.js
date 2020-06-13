@@ -9,20 +9,29 @@ class App extends Component {
   render() {
     return (
 
+      /* Agora, para fixar uso de URL com parâmetros, altere a rota, definindo o parâmetro chamado id.
+      Depois, altere o componente Users, de modo que mostre no parágrafo o valor recebido para o parâmetro id.
+      Teste se está funcionando invocando as urls localhost:3000/users/10,
+       localhost:3000/users/11 e localhost:3000/users/100, por exemplo.
+ */
       <main>
       <BrowserRouter>
       
       <header>
-        <Link to="/" >Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/users">Users</Link>
-
+        <ul>
+        <li><Link to="/" >Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/users">Users</Link></li>
+        <li><Link to="/users/100">User 100</Link></li>
+        <li><Link to="/users/11">User 11</Link></li>
+        <li><Link to="/users/10">User 10</Link></li>
+        </ul>
       </header>
 
       <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path="/users"  render={(props) => <Users {...props} greetingMessage="Good Morning" />}  />
+      <Route path="/users/:id" component={Users} />
       </Switch>
       
       </BrowserRouter>
@@ -34,4 +43,3 @@ class App extends Component {
 
 export default App;
 
-//Adicione uma rota que mapeie o caminho de URL “/about” para o componente About. Acesse http://localhost:3000/about para ver se o componente About foi renderizado!
